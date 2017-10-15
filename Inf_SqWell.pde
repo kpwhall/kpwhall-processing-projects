@@ -26,7 +26,7 @@ void setup(){
  subX=width-150;
  wellWidth=400;
  wellDepth=600;
- partDiameter=10;
+ partDiameter=5;
  partX=(width-wellWidth)/2;
  partY=height/2-100;
  n=1;
@@ -53,7 +53,7 @@ void draw(){
   
   fill(255);
   
-  strokeWeight(3);
+  strokeWeight(8);
   stroke(255);
   line(0.5*(width-wellWidth),0,0.5*(width-wellWidth),wellDepth);
   line(width-0.5*(width-wellWidth),0,width-0.5*(width-wellWidth),wellDepth);
@@ -83,13 +83,13 @@ void drawParticle(){
     
     if(partMin){
       partX=partX+wellWidth/100;
-      partY=400+(wellDepth-550)*sin((n*PI*(partX-0.5*(width-wellWidth)))/wellWidth);
+      partY=400-(1000*sqrt(2.0/wellWidth))*sin((n*PI*(partX-0.5*(width-wellWidth)))/wellWidth);
     } else {
       partX=partX-wellWidth/100;
-      partY=400-(wellDepth-550)*sin((n*PI*(partX-0.5*(width-wellWidth)))/wellWidth);
+      partY=400+(1000*sqrt(2.0/wellWidth))*sin((n*PI*(partX-0.5*(width-wellWidth)))/wellWidth);
     }
     
-    
+    text(partY/1000,100,100);
     
     text("sin((" + n + " * PI * x) / a)", 400,700);
     
@@ -122,7 +122,7 @@ void addClick(){
 }
 
 void subClick(){
-  n--;
+  if(n>1) {n--;}
 }
 
 boolean addHover(int x, int y, int diameter) {
