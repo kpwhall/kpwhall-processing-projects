@@ -33,7 +33,7 @@ void draw() {
   fill(255,0,0);  // Fill and stroke in rgb (255,0,0), aka red
   stroke(255,0,0);
   
-  rect(pos[0],pos[1],pixelSize,pixelSize); // Draw a rectabgle in the current position
+  rect(pos[0],pos[1],pixelSize,pixelSize); // Draw a rectangle in the current position
   
   //saveFrame("frames/####.png"); // Uncomment to make frames
 }
