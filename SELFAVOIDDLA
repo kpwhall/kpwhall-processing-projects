@@ -1,0 +1,12 @@
+// Place Seed at origin
+
+//Boolean array of pixels, set all to false except seed
+
+// Start self avoiding random walker at random point and walk it til it touches seed or leaves lattice
+//  Keep a second boolean array for current walker !IMPORTANT
+//  If array touches seed then add it to your original array, clear the current seed array and start randomly again
+
+// TO self avoid, check current seed grid for all points around seed
+// To connect to seed check seed grid for all points
+
+//EZPZ
