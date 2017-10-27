@@ -9,4 +9,9 @@
 // TO self avoid, check current walker grid for all points around walker
 // To connect to seed check seed grid for all points around walker
 
+// IF SEED LEAVES GRID OR SELF INTERSECTS DO NOT ADD IT TO SEED GRID AND WIPE WALKER GRID
+// Keep track of how many walkers touch seed and set limit or something.
+
+/Maybe add restart button
+
 //EZPZ
